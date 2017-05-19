@@ -11,7 +11,7 @@ Device::BCM2835::init()
 
 #my $Context = "{last_state} = SERVICE_RUNNING;"
 
-
+#pretending this is the water controller by blinking an led on the pi
 Device::BCM2835::gpio_fsel(&Device::BCM2835::RPI_GPIO_P1_11,
                             &Device::BCM2835::BCM2835_GPIO_FSEL_OUTP);
 
@@ -20,11 +20,13 @@ Device::BCM2835::gpio_fsel(&Device::BCM2835::RPI_GPIO_P1_11,
 #Win32::Daemon::State( SERVICE_RUNNING );
 
 my $t = localtime;
+
+#below is a test this wy for the while statement. 
 #my $p = $t->hour >= 10 && $t->min <= 02;
 
 say $t;
 
-
+# time wasn't specfic just testing as i was doing it, Eventually want to add weather plugin and moister sensor. 
 while ($t->hour >= 15 && $t->min <= 16)
 {
 say $t;
