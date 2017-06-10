@@ -6,6 +6,9 @@ use Device::BCM2835;
 use warnings;
 my $debug = 1;
 
+my $user_input = menu();
+dispatcher($user_input);
+
 Device::BCM2835::init()
  || die "Could not init library";
 
@@ -40,7 +43,19 @@ say $t;
 
 }
 
-say "Done!";
+sub menu{
 
+say 'Would you likek to turn water off';
+
+say 'Turn (O)n';
+
+say 'Turn O(f)f';
+
+print 'Choice: ';
+	my $user_input = <STDIN>;
+	chomp($user_input);
+	return $user_input;
+    
+}
 #}#warn
 #say $t;
