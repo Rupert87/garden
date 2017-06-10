@@ -1,6 +1,6 @@
 use v5.14.2;
 use Time::Piece qw(localtime);
-use Device::BCM2835;
+#use Device::BCM2835;
 #use Win32;
 #use Win32::Daemon;
 use warnings;
@@ -9,14 +9,14 @@ my $debug = 1;
 my $user_input = menu();
 dispatcher($user_input);
 
-Device::BCM2835::init()
- || die "Could not init library";
+#Device::BCM2835::init()
+# || die "Could not init library";
 
 #my $Context = "{last_state} = SERVICE_RUNNING;"
 
 #pretending this is the water controller by blinking an led on the pi
-Device::BCM2835::gpio_fsel(&Device::BCM2835::RPI_GPIO_P1_11,
-                            &Device::BCM2835::BCM2835_GPIO_FSEL_OUTP);
+#Device::BCM2835::gpio_fsel(&Device::BCM2835::RPI_GPIO_P1_11,
+#                           &Device::BCM2835::BCM2835_GPIO_FSEL_OUTP);
 
 #$Context->{last_state} = SERVICE_RUNNING;
 #Win32::Daemon::StartService();
@@ -35,11 +35,11 @@ while ($t->hour >= 15 && $t->min <= 16)
 say $t;
 
 # Turn it on
-    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 1);
-    Device::BCM2835::delay(500); # Milliseconds
+#    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 1);
+#   Device::BCM2835::delay(500); # Milliseconds
     # Turn it off
-    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 0);
-    Device::BCM2835::delay(500); # Milliseconds
+#    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 0);
+#   Device::BCM2835::delay(500); # Milliseconds
 
 }
 
