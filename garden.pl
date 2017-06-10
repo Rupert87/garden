@@ -49,13 +49,45 @@ say 'Would you likek to turn water off';
 
 say 'Turn (O)n';
 
-say 'Turn O(f)f';
+say 'Turn O(F)f';
 
 print 'Choice: ';
 	my $user_input = <STDIN>;
 	chomp($user_input);
 	return $user_input;
     
+}
+
+sub dispatcher{
+	my $what_to_do = shift;
+	
+	given(lc($what_to_do)){
+		when ('o') {
+			turn_on();
+		}
+		when ('f'){
+			turn_off();
+		}
+		when ('q'){
+			exit;
+		}
+		default {
+			say "You didn't pick something I understand, try again. (Press enter to continue)";
+			<STDIN>; #pausing for the user to press enter
+			menu();
+		}
+	}
+	
+}
+
+sub turn_on{
+say 'Turning On!'
+
+}
+
+sub turn_off {
+say 'Turning Off!'
+
 }
 #}#warn
 #say $t;
