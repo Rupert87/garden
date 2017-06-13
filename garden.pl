@@ -101,6 +101,5 @@ sub turn_off {
 say 'Turning Off!'
 
 }
-menu();
 
 
