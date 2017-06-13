@@ -8,6 +8,7 @@ my $debug = 1;
 
 my $user_input = menu();
 dispatcher($user_input);
+my $t = localtime;
 
 #Device::BCM2835::init()
 # || die "Could not init library";
@@ -45,7 +46,7 @@ say $t;
 
 sub menu{
 
-say 'Would you likek to turn water off';
+say 'Would you like to turn water off';
 
 say 'Turn (O)n';
 
@@ -62,10 +63,10 @@ sub dispatcher{
 	my $what_to_do = shift;
 	
 	given(lc($what_to_do)){
-		when ('O') {
+		when ('o') {
 			turn_on();
 		}
-		when ('F'){
+		when ('f'){
 			turn_off();
 		}
 		when ('q'){
