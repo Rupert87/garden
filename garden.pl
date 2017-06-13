@@ -85,7 +85,7 @@ sub pi{
 }
 sub turn_on{
 
-Turn it on
+#Turn it on
 #    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 1);
 #   Device::BCM2835::delay(500); # Milliseconds
     # Turn it off
