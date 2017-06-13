@@ -92,12 +92,12 @@ Turn it on
 #    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 0);
 #   Device::BCM2835::delay(500); # Milliseconds
 
-say 'Turning On!'
+say 'Turning On!';
 
 }
 
 sub turn_off {
-say 'Turning Off!'
+say 'Turning Off!';
 
 }
 
