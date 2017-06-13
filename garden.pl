@@ -62,10 +62,10 @@ sub dispatcher{
 	my $what_to_do = shift;
 	
 	given(lc($what_to_do)){
-		when ('o') {
+		when ('O') {
 			turn_on();
 		}
-		when ('f'){
+		when ('F'){
 			turn_off();
 		}
 		when ('q'){
