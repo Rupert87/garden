@@ -4,6 +4,7 @@ use Time::Piece qw(localtime);
 #use Win32;
 #use Win32::Daemon;
 use warnings;
+use strict;
 #globals
 my $debug = 1;
 
