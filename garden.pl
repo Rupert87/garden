@@ -4,6 +4,7 @@ use Time::Piece qw(localtime);
 #use Win32;
 #use Win32::Daemon;
 use warnings;
+#globals
 my $debug = 1;
 
 my $user_input = menu();
@@ -26,22 +27,19 @@ Win32::Daemon::StartService();
 Win32::Daemon::State( SERVICE_RUNNING );
 
 below is a test this wy for the while statement. 
-my $p = $t->hour >= 10 && $t->min <= 02;
-=cut    
+my $p = $t->hour >= 10 && $t->min <= 02;  
 say $t;
 
 
-# time wasn't specfic just testing as i was doing it, Eventually want to add weather plugin and moister sensor. 
-*/  
+# time wasn't specfic just testing as i was doing it, Eventually want to add weather plugin and moister sensor  
 
-=cut
 
 while ($t->hour >= 15 && $t->min <= 16)
 
 {
 say $t;
 }
-
+=cut
 sub menu{
 
 say 'Would you like to turn water off';
