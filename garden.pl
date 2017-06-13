@@ -1,4 +1,4 @@
-use v5.14.3;
+use v5.10;
 use Time::Piece qw(localtime);
 #use Device::BCM2835;
 #use Win32;
@@ -41,6 +41,7 @@ while ($t->hour >= 15 && $t->min <= 16)
 say $t;
 }
 =cut
+
 sub menu{
 
 say 'Would you like to turn water off';
@@ -80,6 +81,8 @@ sub dispatcher{
 
 
 sub pi{
+
+return $t;
 
 
 }
