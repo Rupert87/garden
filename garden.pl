@@ -27,7 +27,7 @@ Win32::Daemon::State( SERVICE_RUNNING );
 
 below is a test this wy for the while statement. 
 my $p = $t->hour >= 10 && $t->min <= 02;
-cut    
+=cut    
 say $t;
 
 
