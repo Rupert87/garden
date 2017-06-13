@@ -10,7 +10,7 @@ my $user_input = menu();
 dispatcher($user_input);
 my $t = localtime;
 
-/*
+=pod
 
 Device::BCM2835::init()
 || die "Could not init library";
@@ -34,6 +34,7 @@ say $t;
 # time wasn't specfic just testing as i was doing it, Eventually want to add weather plugin and moister sensor. 
 */  
 
+=cut
 
 while ($t->hour >= 15 && $t->min <= 16)
 
