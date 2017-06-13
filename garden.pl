@@ -54,7 +54,6 @@ print 'Choice: ';
 	my $user_input = <STDIN>;
 	chomp($user_input);
 	return $user_input;
-    menu();
     
 }
 
@@ -75,7 +74,9 @@ sub dispatcher{
 			say "You didn't pick something I understand, try again. (Press enter to continue)";
 			<STDIN>; #pausing for the user to press enter
 			menu();
-		}
+		return $user_input;
+        menu();
+        }
 	}
 	
 }
@@ -83,7 +84,7 @@ sub dispatcher{
 
 sub pi{
 
-return $t;
+say $t;
 
 
 }
@@ -98,11 +99,14 @@ sub turn_on{
 
 say 'Turning On!';
 
+return &menu();
 }
 
 sub turn_off {
 say 'Turning Off!';
 
+return &menu();
 }
 
-
+return &menu();
+1;
