@@ -10,39 +10,36 @@ my $user_input = menu();
 dispatcher($user_input);
 my $t = localtime;
 
-#Device::BCM2835::init()
-# || die "Could not init library";
+"""
+Device::BCM2835::init()
+|| die "Could not init library";
 
-#my $Context = "{last_state} = SERVICE_RUNNING;"
+my $Context = "{last_state} = SERVICE_RUNNING;"
 
 #pretending this is the water controller by blinking an led on the pi
-#Device::BCM2835::gpio_fsel(&Device::BCM2835::RPI_GPIO_P1_11,
-#                           &Device::BCM2835::BCM2835_GPIO_FSEL_OUTP);
+Device::BCM2835::gpio_fsel(&Device::BCM2835::RPI_GPIO_P1_11,
+                          &Device::BCM2835::BCM2835_GPIO_FSEL_OUTP);
 
-#$Context->{last_state} = SERVICE_RUNNING;
-#Win32::Daemon::StartService();
-#Win32::Daemon::State( SERVICE_RUNNING );
+$Context->{last_state} = SERVICE_RUNNING;
+Win32::Daemon::StartService();
+Win32::Daemon::State( SERVICE_RUNNING );
 
-my $t = localtime;
-
-#below is a test this wy for the while statement. 
-#my $p = $t->hour >= 10 && $t->min <= 02;
-
+below is a test this wy for the while statement. 
+my $p = $t->hour >= 10 && $t->min <= 02;
+cut    
 say $t;
+
 
 # time wasn't specfic just testing as i was doing it, Eventually want to add weather plugin and moister sensor. 
+
+
+
 while ($t->hour >= 15 && $t->min <= 16)
+
 {
 say $t;
-
-# Turn it on
-#    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 1);
-#   Device::BCM2835::delay(500); # Milliseconds
-    # Turn it off
-#    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 0);
-#   Device::BCM2835::delay(500); # Milliseconds
-
 }
+"""
 
 sub menu{
 
@@ -81,7 +78,20 @@ sub dispatcher{
 	
 }
 
+
+sub pi{
+
+
+}
 sub turn_on{
+
+Turn it on
+#    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 1);
+#   Device::BCM2835::delay(500); # Milliseconds
+    # Turn it off
+#    Device::BCM2835::gpio_write(&Device::BCM2835::RPI_GPIO_P1_11, 0);
+#   Device::BCM2835::delay(500); # Milliseconds
+
 say 'Turning On!'
 
 }
@@ -91,3 +101,5 @@ say 'Turning Off!'
 
 }
 menu();
+
+
