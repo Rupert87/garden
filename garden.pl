@@ -54,6 +54,7 @@ print 'Choice: ';
 	my $user_input = <STDIN>;
 	chomp($user_input);
 	return $user_input;
+    men();
     
 }
 
